@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.vscode/
+vector_store/
+embeddings.json
+chunks.json
