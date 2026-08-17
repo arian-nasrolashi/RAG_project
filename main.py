@@ -1,3 +1,4 @@
+
 from fastapi import FastAPI
 from pydantic import BaseModel
 from retrieval import search, create_context
@@ -87,3 +88,13 @@ def ask(data: Question):
         "question": data.question,
         "answer": result["answer"]
     }
+
+
+if __name__ == "__main__":
+    import uvicorn
+
+    uvicorn.run(
+        app,
+        host="0.0.0.0",
+        port=8000
+    )
